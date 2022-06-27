@@ -4,5 +4,5 @@ ARG APP_NAME="product-service"
 ARG APP_VERSION="0.0.1"
 ARG JAR_FILE="/build/libs/${APP_NAME}-${APP_VERSION}.jar"
 
-COPY ${JAR_FILE} /home/ubuntu/app.jar
+COPY build/lib/*.jar /deployments/lib/
 ENTRYPOINT ["java","-jar", "app.jar"]
